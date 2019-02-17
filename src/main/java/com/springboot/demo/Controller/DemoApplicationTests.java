@@ -10,5 +10,8 @@ public class DemoApplicationTests {
     public String helloworld() {
         return "hello,world!";
     }
+    public String helloworld1() {
+        return "hello,world!";
+    }
 }
 
