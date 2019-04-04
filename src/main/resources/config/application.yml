@@ -1,0 +1,35 @@
+# ===================================================================
+# DataSource
+# ===================================================================
+spring:
+  http:
+    multipart:
+      max-file-size: 2048KB
+      max-request-size: 4048KB
+  devtools:
+    livereload:
+      enable: true
+  datasource:
+    dbcp2:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/dietfood?characterEncoding=UTF-8&useUnicode=true&logSlowQueries=true&explainSlowQueries=true&socketTimeout=1000000&connectTimeout=1000&autoReconnect=true
+      username: root
+      password: 1234
+      initial-size: 10
+      max-total: 10
+      max-idle: 10
+      min-idle: 10
+      max-wait-millis: 6000
+      validation-query: SELECT 1
+      test-on-borrow: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 300000
+
+# ===================================================================
+# FREEMARKER
+# ===================================================================
+spring.freemarker:
+  cache: false
+  prefer-file-system-access: true
+  check-template-location: true
+  template_update_delay: 0
